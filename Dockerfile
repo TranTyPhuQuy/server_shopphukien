@@ -10,7 +10,7 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17-jdk-slim
 WORKDIR /app
 
-COPY --from=build /app/target/shopphukien-0.0.1-SNAPSHOT.war shopphukien.war
+COPY --from=build /app/target/springboot-0.0.1-SNAPSHOT.war shopphukien.war
 EXPOSE 8080 
 
 ENTRYPOINT ["java","-jar","shopphukien.war"]
